@@ -23,19 +23,20 @@ public class Main {
         Animal[] animals = {new Eagle(), new Turtle(), new Shark(), new Animal()};
 
 
-//        Animal eagle = new Eagle();
-//        Animal turtle = new Turtle();
-//        Animal shark = new Shark();
-
-
-        Animal [] animals1 = new Animal[1];
         Eagle[] eagles = new Eagle[1];
         Turtle[] turtles = new Turtle[1];
         Shark[] sharks = new Shark[1];
 
+
+        Animal animal0 = new Animal();
+        System.out.println("Animal is super class");
+        animal0.eat();
+
+        System.out.println();
+
         for (Animal animal : animals) {
             if (animal instanceof Eagle) {
-                System.out.println(" Eagle inheritance of Animal and "+ animal);
+                System.out.println(" Eagle is inheritance of Animal and "+ animal);
                 eagles[0] = (Eagle) animal;
                 ((Eagle) animal).fly();
                 System.out.println(animal.getClass());
@@ -46,7 +47,7 @@ public class Main {
 
         for (Animal animal : animals) {
             if (animal instanceof Turtle) {
-                System.out.println("Turtle inheritance of Animal and "+ animal);
+                System.out.println("Turtle is inheritance of Animal and "+ animal);
                 turtles[0] = (Turtle) animal;
                 ((Turtle) animal).swim();
                 System.out.println(animal.getClass());
@@ -57,7 +58,7 @@ public class Main {
 
         for (Animal animal : animals) {
             if (animal instanceof Shark) {
-                System.out.println("Shark inheritance of Animal and " + animal);
+                System.out.println("Shark is inheritance of Animal and " + animal);
                 sharks[0] = (Shark) animal;
                 ((Shark) animal).attack();
                 System.out.println(animal.getClass());
@@ -65,24 +66,3 @@ public class Main {
         }
     }
 }
-
-
-
-//        for (Animal animal : animals) {
-//            if (animal instanceof Eagle) {
-//                System.out.println(animal + " is inheritance of Animal and " + animal);
-//                ((Eagle) animal).fly();
-//                System.out.println(animal.getClass());
-//
-//
-//            } else if (animal instanceof Shark) {
-//                System.out.println(animal + " is inheritance of Animal  and " + animal);
-//                ((Shark) animal).attack();
-//                System.out.println(animal.getClass());
-//
-//            } else if (animal instanceof Turtle) {
-//                System.out.println(animal + " is inheritance of Animal   and " + animal);
-//                ((Turtle) animal).swim();
-//                System.out.println(animal.getClass());
-//            }
-//    }
